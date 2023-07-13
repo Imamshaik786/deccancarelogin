@@ -1,0 +1,17 @@
+.head{
+    align-content: center;
+    align-items: center;
+}
+.navbar {
+   
+    height: 100vh;
+}
+
+.background {
+    background: rgba(0, 0, 0, 0.7) url('loginbg.jpg');
+    background-size: cover;
+}
+
+.bg {
+    height: 100vh;
+}

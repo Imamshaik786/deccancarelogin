@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bg.css">
+    <title>deccancarelogin</title>
+    <script type="text/javascript">
+        // User database
+        var users = [];
+
+        // Function to register a new user
+        function register() {
+            var username = document.getElementById("reg-username").value;
+            var password = document.getElementById("reg-password").value;
+
+            // Check if the username is already taken
+            for (var i = 0; i < users.length; i++) {
+                if (users[i].username === username) {
+                    alert("Username is already taken!");
+                    return;
+                }
+            }
+
+            // Add the new user to the database
+            var newUser = {
+                username: username,
+                password: password
+            };
+            users.push(newUser);
+            alert("Registration successful!");
+        }
+        // Function to log in an existing user
+        function login() {
+            var username = document.getElementById("login-username").value;
+            var password = document.getElementById("login-password").value;
+
+            // Check if the username and password match
+            for (var i = 0; i < users.length; i++) {
+                if (users[i].username === username && users[i].password === password) {
+                    alert("Login successful!");
+                    window.location.href='https://imamshaik786.github.io/deccancare/'
+                    return;
+                }
+            }
+
+            // If no match found
+            alert("Invalid username or password!");
+        }
+        // Get the button element
+var button = document.getElementById('myButton');
+
+// Add data to the button
+button.dataset.myData = 'Hello, World!';
+
+    </script>
+</head>
+<body>
+    <div class="head">
+    <h1 >...DECCAN CARE HOSPITALS...</h1>
+</div>
+   <nav class="background navbar">
+    <h1>Registration</h1>
+    <form>
+        <label for="reg-username">Username:</label>
+        <input type="text" id="reg-username" required><br><br>
+
+        <label for="reg-password">Password:</label>
+        <input type="password" id="reg-password" required><br><br>
+
+        <input type="button" value="Register" onclick="register()">
+    </form>
+
+    <h1>Login</h1>
+    <form>
+        <label for="login-username">Username:</label>
+        <input type="text" id="login-username" required><br><br>
+
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" required><br><br>
+
+        <input type="button" value="Login" onclick="login()">
+    </form>
+    
+</nav>
+</body>
+</html>
