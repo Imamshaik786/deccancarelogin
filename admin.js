@@ -11,10 +11,11 @@ loginForm.addEventListener('submit', function(event) {
   var password = passwordInput.value;
   
   // Perform login validation
-  if (username === 'admin' && password === 'password') {
+  if (username === 'shaik' && password === '786') {
     // Successful login
     alert('Login successful!');
     // Add your admin page logic here or redirect to the admin page
+     window.location.href ='https://imamshaik786.github.io/deccancareadmin/'
   } else {
     // Failed login
     alert('Invalid username or password.');
